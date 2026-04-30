@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: finnhub-mcp
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: FINNHUB_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
